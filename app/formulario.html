@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style-form.css">
+  <title>Formulário - Calculadora HSC</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="caixa">
+      <h1 id="banner"><img src="img/Desktop_aramado.png"></h1>
+    </div>
+  </header>
+
+  <main>
+    <form>
+      <div class="medicamentos">
+        <p class="text-med">Medicamento:</p>
+        <select class="select-medicamento" required id="select-medicamento">
+          <option selected disable hidden value="0">--Escolha o medicamento</option>
+        </select>
+      </div>
+
+      <div class="adm">
+        <div class="dose">
+          <p for="adm-dose" id="adm-dose">Administração de dose:</p>
+          <input type="number" step="0.01" id="adm-dose" class="input-padrao" placeholder="Digite a dose preescrita"
+            required>
+        </div>
+        <div class="via">
+          <p id="adm-via">Adm de via:</p>
+          <label for="radio-via"><input type="radio" name="radio-via" value="adm-via" id="radio-via" required>IV</label>
+          <label for="radio-via"><input type="radio" name="radio-via" value="adm-via" id="radio-via" required>IM</label>
+        </div>
+      </div>
+
+      <div class="marcaeapresent">
+        <div class="marca">
+          <p>Selecione a Marca:</p>
+          <select class="select-marca" required id="select-marca">
+            <option disable selected hidden value="0">--Escolha a marca</option>
+          </select>
+        </div>
+        <div class="apresentacao">
+          <p>Selecione a Apresentação:</p>
+          <select class="select-apresent" required id="select-apresent">
+            <option disable selected hidden value="0">--Escolha a marca</option>
+            <option>Sem informação.</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset>
+        <div class="correto-calcular">
+          <div class="correto">
+            <label class="checkbox"><input type="checkbox" required>Afirmo que os dados estão realmente
+              corretos.</label>
+          </div>
+          <div class="calculando">
+            <input type="submit" value="Calcular" class="calcular">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset id="saidas">
+        <div class="saidas">
+          <div>
+            <p id="diluicao"></p>
+          </div>
+          <div>
+            <p id="resultado"></p>
+          </div>
+        </div>
+
+      </fieldset>
+      <div class="calculando" id="btReset">
+        <input id="novoCalculo" type="reset" value="Novo Calculo" class="calcular">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="banner-unisc">
+      <img src="img/unisc_transp.png" width="201" height="46">
+    </div>
+  </footer>
+
+  <script src="js/popSelect.js"></script>
+  <script src="js/calculaDados.js"></script>
+</body>
+
+</html>

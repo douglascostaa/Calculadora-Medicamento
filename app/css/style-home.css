@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* é necessário definir o height 100% no html, body ou qualquer elemento que estiver entre o body e o .container */
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 20em;
+  padding: 20px 0;
+  background: linear-gradient(#1e90ff, #fefefe);
+}
+
+#texto-alt {
+  display: none;
+}
+
+.caixa {
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+}
+
+.caixa-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.next-button {
+  color: #fefefe;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #1e90ff;
+  border: none;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 1s all;
+  padding: 0.5em;
+}
+
+.next-button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background: #fefefe;
+}
+
+@media (max-width: 350px) {
+  #texto-alt {
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .next-button {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .banner-hsc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+
+  #banner,
+  .banner-hsc,
+  .banner-unisc {
+    display: none;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 768px) {
+  body {
+    width: auto;
+    display: flex;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #banner,
+  .banner-unisc {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .caixa-button {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+  }
+  .next-button {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+  }
+}
